@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu te amo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens2/avatar.png" type="image/x-icon">
+</head>
+<body>
+    <div class="caixaFotos">
+        <div class="imagem"></div>
+    </div>
+    <div class="caixaSom">
+        <div class="caixaSom"></div>
+    </div>
+    
+    
+    
+    <div class="tempo">
+        <div id="tempo" class="tempo"></div>
+    </div>
+
+    <p>
+        Esse é um site bem simples que eu fiz para você lembrar, todos os dias, o quanto eu te amo—mais do que o tempo pode contar. Sei que é meio bobo e até um pouco meloso, mas é só mais uma forma de te mostrar o quanto você significa para mim.
+        <br><br>
+        A gente já passou por tanta coisa que, às vezes, nem parece real. Te dei vários presentes, fiz até uma música meio xoxa naquela época, e agora esse site é mais um presente para a coleção dos que você merece. Ele pode ser simples, mas é seu, e eu fiz com todo o carinho do mundo.
+        <br><br>
+        Acho engraçado como, mesmo com tão pouco tempo juntos, sempre fomos muito unidos. Tivemos muitos motivos para desistir, mas continuamos aqui, como se nada mais importasse além de nós dois. Parece até que nos conhecemos há muito mais tempo do que realmente conhecemos.
+        <br><br>
+        E pode ter certeza: um dia eu ainda vou te dar uma valsa de respeito. Além disso, quero que você saiba que, mesmo que um dia nosso caminho siga direções diferentes, esse site nunca vai sair do ar. Ele vai continuar contando os dias em que eu te amo, porque eu prometi nunca deixar de te amar. E, sinceramente, espero passar o resto da minha vida ao seu lado. 💙
+    </p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function atualizarTempo() {
+                let agora = new Date();
+                let ano = agora.getFullYear();
+                let mes = agora.getMonth() + 1;  // Janeiro é 0, então somamos 1
+                let dia = agora.getDate();
+                let hora = agora.getHours();
+                let minuto = agora.getMinutes();
+                let segundo = agora.getSeconds();
+    
+                // Formatar os números para sempre terem dois dígitos (ex: 01, 09)
+                mes = mes.toString().padStart(2, '0');
+                dia = dia.toString().padStart(2, '0');
+                hora = hora.toString().padStart(2, '0');
+                minuto = minuto.toString().padStart(2, '0');
+                segundo = segundo.toString().padStart(2, '0');
+    
+                // Atualizar o conteúdo da div "tempo" no formato BR (DD/MM/AAAA)
+                let elementoTempo = document.getElementById("tempo");
+                if (elementoTempo) {
+                    elementoTempo.innerHTML = `${dia}/${mes}/${ano} - ${hora}:${minuto}:${segundo}`;
+                }
+            }
+    
+            // Atualiza o tempo a cada segundo
+            setInterval(atualizarTempo, 1000);
+    
+            // Atualiza na hora que carregar a página
+            atualizarTempo();
+        });
+    </script>
+<script src="script.js"></script>
+</body>
+</html>
