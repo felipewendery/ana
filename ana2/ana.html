@@ -15,10 +15,9 @@
         <div class="caixaSom"></div>
     </div>
     
-    
-    
     <div class="tempo">
         <div id="tempo" class="tempo"></div>
+        <div id="contadorDias" class="contadorDias"></div>
     </div>
 
     <p>
@@ -55,14 +54,35 @@
                     elementoTempo.innerHTML = `${dia}/${mes}/${ano} - ${hora}:${minuto}:${segundo}`;
                 }
             }
-    
+
+            function calcularDiasJuntos() {
+                // Data de início (15/02/2022)
+                const dataInicio = new Date("2022-02-15");
+                const agora = new Date();
+                
+                // Calcular a diferença em milissegundos
+                const diff = agora - dataInicio;
+                
+                // Converter milissegundos para dias
+                const diasJuntos = Math.floor(diff / (1000 * 60 * 60 * 24));
+                
+                // Exibir os dias no elemento "contadorDias"
+                let contadorDias = document.getElementById("contadorDias");
+                if (contadorDias) {
+                    contadorDias.innerHTML = `${diasJuntos} dias juntos`;
+                }
+            }
+
             // Atualiza o tempo a cada segundo
             setInterval(atualizarTempo, 1000);
-    
-            // Atualiza na hora que carregar a página
+
+            // Calcular os dias juntos a cada segundo também
+            setInterval(calcularDiasJuntos, 1000);
+
+            // Atualizar na hora que carregar a página
             atualizarTempo();
+            calcularDiasJuntos();
         });
     </script>
 <script src="script.js"></script>
-</body>
-</html>
+</
