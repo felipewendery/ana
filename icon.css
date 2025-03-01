@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
-    background: linear-gradient(to bottom, rgb(89, 26, 148), black);
+    background: linear-gradient(to bottom,rgb(26, 1, 136), black);
     color: white;
     display: flex;
     justify-content: center;

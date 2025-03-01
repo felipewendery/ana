@@ -1,7 +1,7 @@
 html, body {
     height: 225%;
     margin: 0;
-    background: linear-gradient(to bottom, rgb(89, 26, 148), black);
+    background: linear-gradient(to bottom, rgb(26, 1, 136), black);
     color: white;
     display: flex;
     flex-direction: column; /* Organiza os elementos em coluna */
@@ -11,7 +11,7 @@ html, body {
 
 .caixaSom {
     width: 300px; /* Ajusta o tamanho para caber apenas o conteúdo */
-    background-image: url(imagens2/c1aa0e9dad2e3702c6f54595b72267ff.jpg) ;
+    background-image: url(imagens2/capa2.jpg) ;
     background-position: center;
     padding: 10px 30px; /* Espaçamento interno */
     border-radius: 10px; /* Bordas arredondadas */
